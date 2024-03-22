@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+html,
+body,
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'PT Serif';
+  list-style: none;
+}
+
+.createQuiz {
+  text-align: center;
+  padding: 1rem;
+}
+
+.selectGroup {
+  display: flex;
+  margin-block: 2rem;
+}
+
+select {
+  padding: 0.5rem 0.25rem;
+}
+
+#categorySelect,
+#difficultySelect {
+  width: 100%;
+  border: 1px solid rgb(175, 175, 175);
+  border-right: none;
+}
+
+#categorySelect {
+  border-radius: 5px 0 0 5px;
+}
+
+button {
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+#createBtn {
+  border-radius: 0px 5px 5px 0px;
+}
+
+.answerBtn {
+  background-color: white;
+  border: 1px solid #198754;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+}
+
+.answerBtn:disabled {
+  background-color: white;
+  color: black;
+  cursor: not-allowed;
+}
+
+.answerBtn:hover:not(:disabled),
+.answerBtn.selected,
+.answerBtn.correct {
+  background-color: #198754;
+  color: white;
+}
+
+.answerBtn.incorrect {
+  background-color: red;
+  color: white;
+}
+
+.results {
+  padding: 1rem;
+  text-align: center;
+}
+
+.score {
+  margin-inline: auto;
+  max-width: 70%;
+  color: white;
+  padding-block: 0.25rem;
+  margin-bottom: 1rem;
+}
+
+.score.red {
+  background-color: rgb(255, 0, 0);
+}
+
+.score.yellow {
+  background-color: rgb(255, 255, 0);
+  color: black;
+}
+
+.score.green {
+  background-color: rgb(40, 160, 40);
+}
+
+.questionsList {
+  margin-block: 1rem;
+}
+
+.questionItem {
+  text-align: left;
+  max-width: 90%;
+  margin-inline: auto;
+  margin-bottom: 1rem;
+}
+
+.answersList {
+  display: flex;
+  margin-top: 0.5rem;
+  gap: 0.25rem;
+  flex-wrap: wrap;
+}
+
+.customBtn.outline {
+  background-color: white;
+  border: 1px solid grey;
+  color: grey;
+}
+
+.customBtn.solid {
+  background-color: lightslategray;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+.fullW {
+  width: 100%;
+}
+
+@media (max-width: 576px) {
+  .answersList {
+    flex-direction: column;
+  }
+}
